@@ -26,7 +26,7 @@ if (todayDate.getDay() > 1)
 {
     ereyesterday = weekDays[todayDate.getDay()-2];
 }
-else if (todayDate.getDay > 0)
+else if (todayDate.getDay = 1)
 {
     ereyesterday = 'Saturday';
 }
