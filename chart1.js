@@ -18,10 +18,10 @@ var ereyesterday = null;
 
 // base cookie for ozDrank today
 
-document.cookie = "username=todayOz=0; path=/";
+document.cookie = "username=todayOz=" + 0 + "; path=/";
 
 // will store oz drank in one day
-var ozDrank = getCookieValue("todayOz"); 
+var ozDrank = getCookie("todayOz"); 
 
 // if today isn't Sunday, yesterday is one spot backward in the array. If today is Sunday, yesterday is at the end of the array.
 if (todayDate.getDay() > 0)
@@ -94,6 +94,7 @@ function setCookie(name,val){
   let exDate = d.getUTCDate();
   document.cookie = "username=" + name + "=" + val + ";" + "expires=" + exDate +";" + "path=/";
 }
+
 // retrieves cookie if it exists 
 // used to help: w3schools
 function getCookie(name)
@@ -109,13 +110,7 @@ function getCookie(name)
   }
   return "";
 }
-function getCookieValue(name)
-{
-  let returnVal = getCookie(name);
-  let intVal = returnVal.parseInt();
-  return intVal;
 
-}
 //sets ozDrank to 0
 function clearOz(){
   ozDrank = 0;
