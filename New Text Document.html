@@ -4,7 +4,7 @@
     </head>
     <body>
         <script>
-            //code belongs to w3schools
+            //code belongs to w3schools and some me 
             function setCookie(name,val)
             {
             const d = new Date();
@@ -12,22 +12,19 @@
             let exDate = d.getUTCDate();
             document.cookie = "username=" + name + "=" + val + ";" + "expires=" + exDate +";" + "path=/";
             }
-            function getCookie(cname) {
+            function getCookie(cname) 
+            {
                 let name = cname + "=";
                 let decodedCookie = decodeURIComponent(document.cookie);
                 let cookieArr = decodedCookie.split(';');
                 for (i = 0; i < cookieArr.length; i++)
                 {
-                    let j = cookieArr[i];
-                    if (j.indexOf(name) == 0)
+                    if(cookieArr[i].indexOf(name) > -1)
                     {
-                        return j.substring(name.length, j.length);
-                    }
-                    else
-                    {
-                        return -1;
+                    	return cookieArr[i].substring(cookieArr[i].indexOf(name)+name.length);
                     }
                 }
+                return 0;
             }
             function setCookieTest()
             {

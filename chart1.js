@@ -18,11 +18,10 @@ var ereyesterday = null;
 
 // base cookie for ozDrank today
 
-document.cookie = "username=todayOz=0; expires=Wed, 6 May 2026 12:00:00 UTC; path=/";
-alert(document.cookie);
+document.cookie = "username=todayOz=0;";
 
 // will store oz drank in one day
-var ozDrank = 0; //getCookie("todayOz"); 
+var ozDrank = getCookie("todayOz"); 
 
 // if today isn't Sunday, yesterday is one spot backward in the array. If today is Sunday, yesterday is at the end of the array.
 if (todayDate.getDay() > 0)
@@ -89,33 +88,31 @@ function load()
 
 //sets cookie to specific name and value
 //used to help: w3schools
-function setCookie(name,val){
+function setCookie(name,val)
+{
   const d = new Date();
   d.setTime = (d.getTime + (4*24*60*60*1000))
   let exDate = d.getUTCDate();
   document.cookie = "username=" + name + "=" + val + ";" + "expires=" + exDate +";" + "path=/";
 }
 
+            
+
 // retrieves cookie if it exists 
 // used to help: w3schools3
-function cookieTest()
+function getCookie(cname) 
 {
-  alert(document.cookie);
-}
-function getCookie(name)
-{
-  let cookieStr = decodeURIComponent(document.cookie);
-  let splitStr = cookieStr.split(";");
-  let cookieIndex = -1;
-  for (i = 0; i < splitStr.length(); i++)
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let cookieArr = decodedCookie.split(';');
+  for (i = 0; i < cookieArr.length; i++)
   {
-    if (splitStr.indexOf(name) = i)
+    if(cookieArr[i].indexOf(name) > -1)
     {
-      cookieIndex = i;
-      return(splitStr[i].substring(name.length(),splitStr[i].length()).parseInt());
+      return cookieArr[i].substring(cookieArr[i].indexOf(name)+name.length);
     }
   }
-  return -1;
+  return 0;
 }
 
 //sets ozDrank to 0
@@ -128,26 +125,22 @@ function clearOz(){
 function oz4(){
   ozDrank = ozDrank + 4;
   setCookie("todayOz",ozDrank);
-  alert(ozDrank);
 }
 
 // will add 8 to ozDrank if button is pressed
 function oz8(){
   ozDrank = ozDrank + 8;
   setCookie("todayOz",ozDrank);
-  alert(ozDrank);
 }
 
 // will add 16 to ozDrank if button is pressed
 function oz16(){
   ozDrank = ozDrank + 16;
   setCookie("todayOz",ozDrank);
-  alert(ozDrank);
 }
 
 // will add 32 to ozDrank if button is pressed
 function oz32(){
   ozDrank = ozDrank + 32;
   setCookie("todayOz",ozDrank);
-  alert(ozDrank);
 }
