@@ -120,7 +120,7 @@ function clearOz(){
 
 // will add 4 to ozDrank if button is pressed
 function oz4(){
-  ozDrank = Number(ozDrank) += Number(4);
+  ozDrank += 4;
   setCookie("todayOz",ozDrank);
   load();
   alert(ozDrank);
