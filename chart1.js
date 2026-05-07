@@ -16,13 +16,13 @@ var yesterday = null;
 // will hold the day before yesterday (or ereyesterday) as a String
 var ereyesterday = null;
 
+// will store oz drank in one day
+var ozDrank = 0;
 // base cookie for ozDrank today
 
 document.cookie = setCookie("todayOz",ozDrank);
 
-// will store oz drank in one day
-var ozDrank = getCookie("todayOz"); 
-
+ozDrank = getCookie("todayOz"); 
 
 // if today isn't Sunday, yesterday is one spot backward in the array. If today is Sunday, yesterday is at the end of the array.
 if (todayDate.getDay() > 0)
