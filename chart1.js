@@ -21,7 +21,7 @@ var ozDrank = getCookie("todayOz");
 
 // base cookie for ozDrank today
 
-document.cookie = setCookie("todayOz",ozDrank);e
+document.cookie = setCookie("todayOz",ozDrank);
 
 // if today isn't Sunday, yesterday is one spot backward in the array. If today is Sunday, yesterday is at the end of the array.
 if (todayDate.getDay() > 0)
@@ -120,29 +120,25 @@ function clearOz(){
 
 // will add 4 to ozDrank if button is pressed
 function oz4(){
-  ozDrank += 4;
+  ozDrank = ozDrank + 4;
   setCookie("todayOz",ozDrank);
-  load();
-  alert(ozDrank);
+  alert(getCookie("todayOz"));
 }
 
 // will add 8 to ozDrank if button is pressed
 function oz8(){
-  ozDrank += 8;
+  ozDrank = ozDrank + 8;
   setCookie("todayOz",ozDrank);
-  load();
 }
 
 // will add 16 to ozDrank if button is pressed
 function oz16(){
-  ozDrank += 16;
+  ozDrank = ozDrank + 16;
   setCookie("todayOz",ozDrank);
-  load();
 }
 
 // will add 32 to ozDrank if button is pressed
 function oz32(){
-  ozDrank += 32;
+  ozDrank = ozDrank + 32;
   setCookie("todayOz",ozDrank);
-  load();
 }
