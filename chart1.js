@@ -54,7 +54,7 @@ const barColors = ['#347', "#399","#876"];
 // creates chart (Chart.js)
 const canvas = document.getElementById('waterBar');
 
-new Chart (canvas, {
+new Chart (ctx, {
   type: "bar",
   data: {
     labels: xValues,
@@ -82,7 +82,7 @@ new Chart (canvas, {
 //reloads chart
 function load()
 {
-  canvas.update();
+  chart.update();
 }
 
 //sets cookie to specific name and value
