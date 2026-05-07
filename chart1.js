@@ -17,7 +17,7 @@ var yesterday = null;
 var ereyesterday = null;
 
 // will store oz drank in one day
-ozDrank = getCookie("todayOz");
+ozDrank = Number(getCookie("todayOz"));
 
 // base cookie for ozDrank today
 document.cookie = setCookie("todayOz",ozDrank);
