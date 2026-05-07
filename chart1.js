@@ -52,9 +52,9 @@ const yValues = [64,72,ozDrank];
 const barColors = ['#347', "#399","#876"];
 
 // creates chart (Chart.js)
-const ctx = document.getElementById('waterBar');
+const canvas = document.getElementById('waterBar');
 
-new Chart (ctx, {
+new Chart (canvas, {
   type: "bar",
   data: {
     labels: xValues,
@@ -82,7 +82,7 @@ new Chart (ctx, {
 //reloads chart
 function load()
 {
-  Chart.update();
+  canvas.update();
 }
 
 //sets cookie to specific name and value
