@@ -48,14 +48,14 @@ else
 
 // fill in values of the graph
 const xValues = [ereyesterday, yesterday, today];
-const yValues = [64,72,ozDrank];
+const yValues = [0,0,ozDrank];
 const barColors = ['#347', "#399","#876"];
 
 // creates chart (Chart.js)
 const canvas = document.getElementById('waterBar');
 
 new Chart (ctx, {
-  type: "bar",
+  type: "pie",
   data: {
     labels: xValues,
     datasets: [{
