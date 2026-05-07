@@ -82,7 +82,7 @@ new Chart (ctx, {
 //reloads chart
 function load()
 {
-  Chart.resetChart();
+  Chart.update();
 }
 
 //sets cookie to specific name and value
@@ -122,6 +122,7 @@ function oz4(){
   ozDrank += 4;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
+  load();
 }
 
 // will add 8 to ozDrank if button is pressed
@@ -129,6 +130,7 @@ function oz8(){
   ozDrank += 8;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
+  load();
 }
 
 // will add 16 to ozDrank if button is pressed
@@ -136,6 +138,7 @@ function oz16(){
   ozDrank += 16;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
+  load();
 }
 
 // will add 32 to ozDrank if button is pressed
@@ -143,4 +146,5 @@ function oz32(){
   ozDrank += 32;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
+  load();
 }
