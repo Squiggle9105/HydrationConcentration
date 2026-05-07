@@ -17,12 +17,10 @@ var yesterday = null;
 var ereyesterday = null;
 
 // will store oz drank in one day
-var ozDrank = 0;
+ozDrank = getCookie("todayOz");
+
 // base cookie for ozDrank today
-
 document.cookie = setCookie("todayOz",ozDrank);
-
-ozDrank = getCookie("todayOz"); 
 
 // if today isn't Sunday, yesterday is one spot backward in the array. If today is Sunday, yesterday is at the end of the array.
 if (todayDate.getDay() > 0)
