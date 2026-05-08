@@ -42,7 +42,7 @@ else
 
 // fill in values of the graph
 const xValues = [ereyesterday, yesterday, today];
-const yValues = [0,0,getOzDrank()];
+const yValues = [0,0,20];
 const barColors = ['#347', "#399","#876"];
 
 // creates chart (Chart.js)
