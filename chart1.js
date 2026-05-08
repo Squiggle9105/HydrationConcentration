@@ -63,20 +63,6 @@ new Chart (ctx, {
       data: yValues
     }]
   },
-  options: {
-    plugins: {
-      legend: {display: false},
-      title: {
-        display: true,
-        text: "Ounces per day",
-        font: 
-        {
-          family:'Verdana',
-          size: 16,
-        },
-      }
-    }
-  }
 });
 
 //reloads chart
