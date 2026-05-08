@@ -36,6 +36,11 @@ function clearOz(){
   setCookie("todayOz",ozDrank);
 }
 
+//gets the value of ozDrank
+function getOzDrank()
+{
+    return ozDrank;
+}
 // will add 4 to ozDrank if button is pressed
 function oz4(){
   ozDrank += 4;
