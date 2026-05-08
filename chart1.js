@@ -46,7 +46,7 @@ const yValues = [0,0,getOzDrank()];
 const barColors = ['#347', "#399","#876"];
 
 // creates chart (Chart.js)
-const canvas = document.getElementById('waterBar');
+const ctx = document.getElementById('waterBar');
 
 new Chart (ctx, {
   type: "bar",
