@@ -104,10 +104,10 @@ button
     font-weight:bold;
     font-size:16pt;
     text-align:center;
-    background-color:#879;
-    color:#324;
+    background-color:#569;
+    color:#125;
 }
 button:active
 {
-    background-color:#768;
+    background-color:#67a;
 }
