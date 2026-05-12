@@ -5,7 +5,7 @@ function notifyMe() {
   } else if (Notification.permission === "granted") {
     // Check whether notification permissions have already been granted;
     // if so, create a notification
-    var msg = "Remember to stay hydrated! You've had " + getOzDrank + " ounces so far today!";
+    var msg = "Remember to stay hydrated! You've had " + getOzDrank() + " ounces so far today!";
     const notification = new Notification(msg);
     // …
   } else if (Notification.permission !== "denied") {
