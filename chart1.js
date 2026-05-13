@@ -48,27 +48,13 @@ const barColors = ['#347', "#399","#876"];
 // creates chart (Chart.js)
 const ctx = document.getElementById("waterBar");
 
-new Chart (ctx, {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    plugins: {
-      legend: {display: false},
-      title: {
-        display: true,
-        text: "Ounces per day",
-        font: 
-        {
-          family:'Verdana',
-          size: 16,
-        },
-      }
-    }
-  }
-});
+const barChart = new Chart(ctx, {type: "bar", data: {labels: xValues, datasets: [{backgroundColor: barColors,data: yValues}]},options: 
+  {plugins: {legend: {display: false},title: {display: true,text: "Ounces per day",font: {family:'Verdana',size: 16,},}}}});
+
+function addData(chart, label, newData) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(newData);
+    });
+    chart.update();
+}
