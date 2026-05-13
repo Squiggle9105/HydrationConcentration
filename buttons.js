@@ -54,7 +54,6 @@ function oz4(){
 function oz8(){
   ozDrank += 8;
   setCookie("todayOz",ozDrank);
-  alert(getCookie("todayOz"));
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
 }
@@ -63,7 +62,6 @@ function oz8(){
 function oz16(){
   ozDrank += 16;
   setCookie("todayOz",ozDrank);
-  alert(getCookie("todayOz"));
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
 }

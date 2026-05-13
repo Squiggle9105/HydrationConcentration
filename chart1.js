@@ -61,12 +61,12 @@ function addData(chart, label, newData) {
     chart.data.datasets.forEach((dataset) => {
         dataset.data.push(newData);
     });
-    chart.update();
+    chart.update(0);
 }
 function removeData(chart) {
     chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
         dataset.data.pop();
     });
-    chart.update();
+    chart.update(0);
 }
