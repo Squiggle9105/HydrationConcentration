@@ -34,6 +34,8 @@ function getCookie(cname)
 function clearOz(){
   ozDrank = 0;
   setCookie("todayOz",ozDrank);
+  removeData(barChart);
+  addData(barChart,getTodayLabel(),ozDrank);
 }
 
 //gets the value of ozDrank
