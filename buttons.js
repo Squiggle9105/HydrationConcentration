@@ -46,7 +46,7 @@ function oz4(){
   ozDrank += 4;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
-  load();
+  waterBar.update();
 }
 
 // will add 8 to ozDrank if button is pressed
@@ -54,7 +54,7 @@ function oz8(){
   ozDrank += 8;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
-  load();
+  waterBar.update();
 }
 
 // will add 16 to ozDrank if button is pressed
@@ -62,7 +62,7 @@ function oz16(){
   ozDrank += 16;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
-  load();
+  waterBar.update();
 }
 
 // will add 32 to ozDrank if button is pressed
@@ -70,5 +70,5 @@ function oz32(){
   ozDrank += 32;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
-  load();
+  waterBar.update();
 }

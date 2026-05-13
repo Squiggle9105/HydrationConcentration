@@ -72,10 +72,3 @@ new Chart (ctx, {
     }
   }
 });
-
-//reloads chart
-function load()
-{
-  waterBar.update();
-}
-
