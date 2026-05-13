@@ -45,7 +45,6 @@ function getOzDrank()
 function oz4(){
   ozDrank += 4;
   setCookie("todayOz",ozDrank);
-  alert(getCookie("todayOz"));
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
 }
