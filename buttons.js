@@ -46,7 +46,7 @@ function oz4(){
   ozDrank += 4;
   setCookie("todayOz",ozDrank);
   alert(getCookie("todayOz"));
-  barChart.update();
+  addData(barChart, xValues, ozDrank);
 }
 
 // will add 8 to ozDrank if button is pressed
