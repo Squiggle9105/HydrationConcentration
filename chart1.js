@@ -31,7 +31,7 @@ if (todayDate.getDay() > 1)
 {
     ereyesterday = weekDays[todayDate.getDay()-2];
 }
-else if (todayDate.getDay = 1)
+else if (todayDate.getDay == 1)
 {
     ereyesterday = 'Saturday';
 }
@@ -42,11 +42,11 @@ else
 
 // fill in values of the graph
 const xValues = [ereyesterday, yesterday, today];
-const yValues = [48,56,ozDrank];
+const yValues = [0,0,ozDrank];
 const barColors = ['#347', "#399","#876"];
 
 // creates chart (Chart.js)
-const ctx = document.getElementById('waterBar');
+const ctx = document.getElementById("waterBar");
 
 new Chart (ctx, {
   type: "bar",
@@ -76,6 +76,6 @@ new Chart (ctx, {
 //reloads chart
 function load()
 {
-  chart.update();
+  waterBar.update();
 }
 
