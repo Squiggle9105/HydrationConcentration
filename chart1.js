@@ -40,6 +40,11 @@ else
     ereyesterday = 'Friday';
 }
 
+function getTodayLabel()
+{
+  return today;
+}
+
 // fill in values of the graph
 const xValues = [ereyesterday, yesterday, today];
 const yValues = [0,0,ozDrank];
@@ -55,6 +60,13 @@ function addData(chart, label, newData) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
         dataset.data.push(newData);
+    });
+    chart.update();
+}
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
     });
     chart.update();
 }
