@@ -24,12 +24,16 @@ function notifyTime() {
     let now = new Date();
     let time = now.getTime();
     let yest = new Date(now.getFullYear(),now.getMonth(),(now.getDate() - 1),12,0,0);
+    let egg = true;
     time = time - yest.getTime();
     time = Math.round((time/1000)/60)/60;
     let rounded = Math.round(time);
-    while (time % rounded != 0)
+    while (egg)
     {
+      if (time % rounded != 0)
+        {
+          notifyMe();
+        }
       notifyTime();
     }
-    notifyMe();
 }
