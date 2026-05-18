@@ -36,7 +36,6 @@ function clearOz(){
   setCookie("todayOz",ozDrank);
   removeData(barChart);
   addData(barChart,getTodayLabel(),ozDrank);
-  notifyTime();
 }
 
 //gets the value of ozDrank
@@ -50,6 +49,7 @@ function oz4(){
   setCookie("todayOz",ozDrank);
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
+  setInterval(notifyMe,300000);//3600000
 }
 
 // will add 8 to ozDrank if button is pressed
@@ -58,6 +58,7 @@ function oz8(){
   setCookie("todayOz",ozDrank);
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
+  setInterval(notifyMe,300000);//3600000
 }
 
 // will add 16 to ozDrank if button is pressed
@@ -66,6 +67,7 @@ function oz16(){
   setCookie("todayOz",ozDrank);
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
+  setInterval(notifyMe,300000);//3600000
 }
 
 // will add 32 to ozDrank if button is pressed
@@ -74,4 +76,5 @@ function oz32(){
   setCookie("todayOz",ozDrank);
   removeData(barChart);
   addData(barChart, getTodayLabel(), ozDrank);
+  setInterval(notifyMe,300000);//3600000
 }

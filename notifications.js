@@ -19,7 +19,7 @@ function notifyMe() {
     });
   }
 }
-
+//
 function notifyTime() {
     let now = new Date();
     let time = now.getTime();
@@ -30,7 +30,7 @@ function notifyTime() {
     let rounded = Math.round(time);
     while (egg)
     {
-      if (time % rounded != 0)
+      if (time % rounded == 0)
         {
           notifyMe();
         }
