@@ -8,8 +8,9 @@
             <script src="buttons.js"></script>
             <script src="chart2.js"></script>
             <script src="notifications.js"></script>
+            <script src="goal.js"></script>
     </head>
-    <body>
+    <body onload = "disp()">
     <!-- Chart.js v4.5.1vhttps://www.chartjs.org (c) 2025 Chart.js Contributors Released under the MIT License -->
     <noscript>
         <div id="noScript">
@@ -35,15 +36,18 @@
                     </td>
                     <!-- Top Row second cell with pie chart-->
                     <td id="td2">
-                        <button onclick="oz4()"> +4oz </button>
-                        <button onclick="oz8()"> +8oz </button>
-                        <button onclick="oz16()"> +16oz </button>
-                        <button onclick="oz32()"> +32oz </button>
+                        <button onclick="oz4()" class = "bodyfont"> +4oz </button>
+                        <button onclick="oz8()" class = "bodyfont"> +8oz </button>
+                        <button onclick="oz16()" class = "bodyfont"> +16oz </button>
+                        <button onclick="oz32()" class = "bodyfont"> +32oz </button>
                     </td>
                 </tr>
                 <tr>
                     <!-- Bottom row first cell with ???-->
                     <td id="td2">
+                        <p class = "bodyfont">Today&apos;s Goal&colon;</p>
+                        <p id = "goalDisplay" class = "bodyfont2">
+                        </p>
                     </td>
                     <!-- Bottom row second cell with +oz button-->
                     <td>
@@ -55,6 +59,7 @@
         <article>
             <img draggable = "false" id = "droppy" onclick = "clearOz()"></img>
         </article>
+        <button onclick = "setGoal()" id = "button2">Set Goal</button>
 
     </body>
 </html>

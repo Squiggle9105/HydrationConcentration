@@ -30,7 +30,7 @@ nav
 }
 article
 {
-    height: 90%;
+    height: 88%;
     width: 54%;
     margin-left:46%;
     border-radius: 5px;
@@ -100,14 +100,37 @@ button
     margin-left:8%;
     border:none;
     border-radius:5px;
+    background-color:#67a;
+}
+#button2
+{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight:bold;
-    font-size:16pt;
-    text-align:center;
-    background-color:#569;
-    color:#125;
+    font-weight: bold;
+    color:#125; width:10%; 
+    height:10%; 
+    margin:0; 
+    margin-top:1%; 
+    font-size:14pt; 
+    float:right;
 }
 button:active
 {
-    background-color:#67a;
+    background-color:#78b;
+}
+
+.bodyfont
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    font-size:16pt;
+    color:#125;
+    text-align:center;
+}
+.bodyfont2
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bolder;
+    font-size:20pt;
+    color:#125;
+    text-align:center;
 }
